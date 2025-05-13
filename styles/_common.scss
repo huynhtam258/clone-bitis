@@ -57,6 +57,14 @@
   flex-wrap: wrap;
 }
 
+.align-items-center {
+  align-items: center !important;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
 .justify-content-between {
   -ms-flex-pack: justify !important;
   justify-content: space-between !important;

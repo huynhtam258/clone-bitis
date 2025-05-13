@@ -5,6 +5,32 @@ body {
   font-family: 'futura-REGULAR', sans-serif;
 }
 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: var(--shop-color-title);
+}
+
+a {
+  color: var(--shop-color-text);
+  text-decoration: none;
+  outline: none;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+  color: var(--shop-color-hover);
+  text-decoration: none;
+  outline: none;
+}
+
 p {
   margin: 0;
 }

@@ -8,7 +8,6 @@
 
 <style lang="scss" scoped>
 .grid-item {
-  padding: 20px;
   text-align: center;
   border: 1px solid #ddd;
 }

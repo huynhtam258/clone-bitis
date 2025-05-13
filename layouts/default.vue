@@ -1,9 +1,12 @@
 <template>
   <bitis-header />
   <bitis-body>
-    <bitis-grid>
-      <bitis-grid-item v-for="i in 10">Item {{ i }}</bitis-grid-item>
-    </bitis-grid>
+    <div class="d-flex home-product">
+      <bitis-card />
+      <bitis-card :title="'Sản phẩm mới'" />
+      <bitis-card :title="'Sản phẩm nổi bật'" />
+    </div>
+
   </bitis-body>
 
   <bitis-footer />
@@ -12,8 +15,7 @@
 <script setup>
 import BitisHeader from "~/components/layout/bitis-header.vue";
 import BitisBody from "~/components/layout/bitis-body.vue"
-import BitisGrid from "~/components/layout/bitis-grid.vue";
-import BitisGridItem from "~/components/layout/bitis-grid-item.vue";
+import BitisCard from '~/components/layout/bitis-card.vue'
 import BitisFooter from "~/components/layout/bitis-footer.vue";
 
 import { useHead } from 'nuxt/app'
@@ -30,4 +32,9 @@ useHead({
 
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.home-product {
+  flex-direction: column;
+  gap: 60px;
+}
+</style>
