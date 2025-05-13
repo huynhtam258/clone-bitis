@@ -1,16 +1,14 @@
 <template>
   <div class="bitis-product">
     <div class="bitis-product__image">
-      <img
-        src="~/assets/img/products/product_1.png"
-        alt="[Sale khủng đồng giá 799k] Giày Thể Thao Biti’s Hunter X LiteDash - Original Edition 2K24 Nam Màu Kem Lợt HSM007506KEL"
-      >
+      <NuxtImg src="/products/product_1.png"
+        alt="[Sale khủng đồng giá 799k] Giày Thể Thao Biti’s Hunter X LiteDash - Original Edition 2K24 Nam Màu Kem Lợt HSM007506KEL" />
     </div>
 
     <div class="bitis-product__box">
       <div class="box-title">
         <h4>
-          <a href="">
+          <a href="https://bitis.com.vn/products/giay-the-thao-nam-biti-s-hunter-x-litedash-original-edition-2k24-hsm007506kel">
             [Sale khủng đồng giá 799k] Giày Thể Thao Biti’s Hunter X LiteDash - Original Edition 2K24 Nam Màu Kem
             Lợt HSM007506KEL
           </a>
@@ -40,17 +38,21 @@
 .bitis-product {
   width: 100%;
   padding-bottom: 10px;
+
   &__image {
     width: 100%;
     aspect-ratio: 1 / 1;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
   &__box {
     padding: 0 10px;
+
     .box-title {
       h4 {
         font-size: 14px;

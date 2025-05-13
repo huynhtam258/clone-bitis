@@ -2,7 +2,7 @@
   <div class="main-header">
     <div class="main-header__container">
       <div class="main-header__logo">
-        <img src="./../../assets/logo.svg" alt="" srcset="">
+        <NuxtImg src="/logos/logo.svg" alt="bitis" />
       </div>
       <ul class="main-header__list">
         <li class="main-header__item">VỀ BITI'S</li>
@@ -13,6 +13,7 @@
         <li class="main-header__item">PHỤ KIỆN</li>
         <li class="main-header__item">CHIA SẺ</li>
       </ul>
+      <div class="main-header__action"></div>
     </div>
   </div>
 </template>
@@ -22,8 +23,20 @@
 
 <style lang="scss" scoped>
 .main-header {
+  &__logo {
+    height: 60px;
+    width: auto;
+    padding: 5px 15px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
   &__container {
     display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
   }
   &__list {
     padding: 0;

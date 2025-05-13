@@ -27,7 +27,10 @@ useHead({
     { name: 'keywords', content: 'Bán giày online' },
     { property: 'og:title', content: 'Trang web bán hàng chính hãng' },
     { property: 'og:description', content: `Trang bán hàng chính thức trực thuộc công ty TNHH Bình Tiên (Biti’s), kênh bán hàng trực tuyến sản phẩm giày dép Biti's Việt Nam` }
-  ]
+  ],
+  htmlAttrs: {
+    lang: 'en'
+  }
 })
 
 </script>

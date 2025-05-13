@@ -26,7 +26,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--shop-color-hover);
+  color: var(--shop-color-hover) !important;
   text-decoration: none;
   outline: none;
 }
