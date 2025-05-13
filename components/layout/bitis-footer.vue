@@ -1,5 +1,23 @@
 <template>
   <div class="bitis-footer">
+    <bitis-newsletter />
+    <div class="bitis-footer__info">
+      <div class="d-flex row-info">
+        <bitis-info-section
+          :title-info="'Về Bitis'"
+          :item-list="[]"
+        />
+        <bitis-info-section
+          :title-info="infomationData.title"
+          :item-list="infomationData.menuItems"
+        />
+        <bitis-info-section
+          :title-info="helpData.title"
+          :item-list="helpData.menuItems"
+        />
+        <bitis-contract />
+      </div>
+    </div>
     <div class="bitis-footer__bottom">
       <div class="container content-bottom d-flex">
         <div class="copyright content-bottom__item">
@@ -28,10 +46,44 @@
 </template>
 
 <script setup>
+import BitisNewsletter from './bitis-newsletter.vue';
+import BitisInfoSection from './bitis-info-section.vue';
+import BitisContract from './bitis-contract.vue';
+
+const infomationData = {
+  title: 'Thông tin',
+  menuItems: [
+    { text: "Trạng thái đơn hàng", link: "#" },
+    { text: "Hình thức giao hàng", link: "#" },
+    { text: "Hình thức thanh toán", link: "#" },
+    { text: "Hướng dẫn cách chọn Size", link: "#" },
+    { text: "Chính sách đổi Size", link: "#" },
+    { text: "Chính sách đổi trả", link: "#" },
+    { text: "Chính sách bảo hành", link: "#" },
+    { text: "Chính sách khách hàng thân thiết", link: "#" },
+    { text: "Chính sách bảo vệ thông tin khách hàng", link: "#" }
+  ]
+}
+const helpData = {
+  title: 'Trợ giúp',
+  menuItems: [
+    { text: "Tuyển Dụng", link: "#" },
+    { text: "Hệ thống cửa hàng", link: "#" },
+    { text: "Liên hệ hợp tác", link: "#" },
+    { text: "Q&A", link: "#" }
+  ]
+}
 </script>
 
 <style lang="scss" scoped>
 .bitis-footer {
+  &__info {
+    padding-top: 25px;
+    .row-info {
+      justify-content: center;
+      gap: 60px;
+    }
+  }
   &__bottom {
     background-color: #dfdfdf;
     border-top: 1px solid #e7e7e7;
@@ -68,7 +120,6 @@
 }
 
 @media (max-width: 700px) {
-
   .bitis-footer {
     &__bottom {
       .content-bottom {

@@ -15,10 +15,12 @@
       </ul>
       <div class="main-header__action"></div>
     </div>
+    <bitis-banner />
   </div>
 </template>
 
 <script setup>
+import BitisBanner from './bitis-banner.vue';
 </script>
 
 <style lang="scss" scoped>
