@@ -5,7 +5,7 @@
     <bitis-body>
       <bitis-home-banner />
       <div class="d-flex home-product">
-        <bitis-card />
+        <bitis-card :title="''" />
         <bitis-card :title="'Sản phẩm mới'" />
         <bitis-card :title="'Sản phẩm nổi bật'" />
       </div>

@@ -1,5 +1,6 @@
 <template>
   <div class="main-header">
+    <bitis-header-contract />
     <div class="main-header__container">
       <div class="main-header__logo">
         <NuxtImg src="/logos/logo.svg" alt="bitis" />
@@ -20,6 +21,7 @@
 </template>
 
 <script setup>
+import BitisHeaderContract from './bitis-header-contract.vue';
 import BitisBanner from './bitis-banner.vue';
 </script>
 
