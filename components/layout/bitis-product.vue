@@ -1,8 +1,10 @@
 <template>
   <div class="bitis-product">
     <div class="bitis-product__image">
-      <NuxtImg src="/products/product_1.png"
-        alt="[Sale khủng đồng giá 799k] Giày Thể Thao Biti’s Hunter X LiteDash - Original Edition 2K24 Nam Màu Kem Lợt HSM007506KEL" />
+      <NuxtImg src="/products/product_1.webp"
+        alt="[Sale khủng đồng giá 799k] Giày Thể Thao Biti’s Hunter X LiteDash - Original Edition 2K24 Nam Màu Kem Lợt HSM007506KEL"
+        format="webp"
+      />
     </div>
 
     <div class="bitis-product__box">
