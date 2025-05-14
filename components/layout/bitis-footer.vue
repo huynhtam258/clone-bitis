@@ -34,7 +34,7 @@
           </p>
         </div>
         <div class="content-bottom__item approved-icon">
-          <NuxtImg src="/logos/bocongthuong_confirm_medium.png" width="120px" alt="Bộ công thương" />
+          <NuxtImg src="/logos/bocongthuong_confirm_medium.png" :width="120" :height="45" alt="Bộ công thương" format="webp" />
         </div>
         <div class="certificate content-bottom__item">
           Giấy CNĐKDN: 0301340497 được cấp ngày 20/01/1992, được sửa đổi lần thứ 25 ngày 27/01/2022 bởi Sở Kế hoạch và

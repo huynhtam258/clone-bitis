@@ -1,6 +1,6 @@
 <template>
   <div class="bitis-contract">
-    <NuxtImg src="/logos/logo.svg" alt="bitis" width="110px"/>
+    <NuxtImg src="/logos/logo.svg" :height="60" :width="95" alt="bitis" width="110px"/>
     <h4>CÔNG TY TNHH SẢN XUẤT HÀNG TIÊU DÙNG BÌNH TIÊN</h4>
     <ul class="bitis-contract__list">
       <li class="bitis-contract__item andress-item">

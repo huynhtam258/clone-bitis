@@ -3,7 +3,7 @@
     <bitis-header-contract />
     <div class="main-header__container">
       <div class="main-header__logo">
-        <NuxtImg src="/logos/logo.svg" alt="bitis" />
+        <NuxtImg src="/logos/logo.svg" :height="60" :width="95" alt="bitis" />
       </div>
       <ul class="main-header__list">
         <li class="main-header__item">VỀ BITI'S</li>
@@ -31,10 +31,10 @@ import BitisBanner from './bitis-banner.vue';
     height: 60px;
     width: auto;
     padding: 5px 15px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    // }
   }
   &__container {
     display: flex;

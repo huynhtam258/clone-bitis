@@ -10,7 +10,7 @@
         <li>Kiểm tra đơn hàng</li>
         <li>VN</li>
         <li class="b2b">
-          <img src="/logos/b2b.webp" alt="b2b" width="120px" height="28px">
+          <NuxtImg src="/logos/b2b.webp" alt="b2b" width="120px" height="28px" format="webp" />
         </li>
       </ul>
     </div>

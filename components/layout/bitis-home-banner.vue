@@ -1,10 +1,9 @@
 <template>
   <div class="container bitis-banner-product">
-    <img
+    <NuxtImg
       src="/products/banner_product.webp"
       alt="TOP TÌM KIẾM"
       format="webp"
-      preload
     />
   </div>
 </template>
