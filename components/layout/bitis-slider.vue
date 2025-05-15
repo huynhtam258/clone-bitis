@@ -2,10 +2,10 @@
   <div class="bitis-slider">
     <swiper :modules="modules" :pagination="{ clickable: true }" :loop="true" effect="fade">
       <swiper-slide>
-        <img class="bitis-slider__img" src="/slider/slider_1.webp" format="webp" alt="slider 1" preload>
+        <img class="bitis-slider__img" src="/slider/slider_1.webp" width="1920" height="750" format="webp" alt="slider 1" preload>
       </swiper-slide>
       <swiper-slide>
-        <img class="bitis-slider__img" src="/slider/slider_2.webp" format="webp" alt="slider 2" preload>
+        <img class="bitis-slider__img" src="/slider/slider_2.webp" width="1920" height="750" format="webp" alt="slider 2" preload>
       </swiper-slide>
     </swiper>
   </div>
@@ -28,6 +28,7 @@ const modules = [Pagination];
 
   &__img {
     width: 100%;
+    height: auto;
   }
 
 }
