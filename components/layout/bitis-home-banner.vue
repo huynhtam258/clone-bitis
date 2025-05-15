@@ -4,6 +4,8 @@
       src="/products/banner_product.webp"
       alt="TOP TÌM KIẾM"
       format="webp"
+      :width="1140"
+      :height="445"
     />
   </div>
 </template>
