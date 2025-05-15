@@ -1,5 +1,5 @@
 <template>
-  <div class="bitis-gallery d-flex">
+  <section class="bitis-gallery d-flex">
     <div class="bitis-gallery__item">
       <NuxtImg src="/gallery/gallery_1.webp" width="320" height="320" format="webp" alt="gallery image" />
     </div>
@@ -24,7 +24,7 @@
     <div class="bitis-gallery__item">
       <NuxtImg src="/gallery/gallery_8.jpg" width="320" height="320" format="webp" alt="gallery image" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

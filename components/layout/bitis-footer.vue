@@ -1,8 +1,8 @@
 <template>
-  <div class="bitis-footer">
+  <footer class="bitis-footer">
     <bitis-newsletter />
     <bitis-gallery />
-    <div class="bitis-footer__info">
+    <section class="bitis-footer__info">
       <div class="d-flex row-info">
         <bitis-info-section
           :title-info="'Về Bitis'"
@@ -18,8 +18,8 @@
         />
         <bitis-contract />
       </div>
-    </div>
-    <div class="bitis-footer__bottom">
+    </section>
+    <section class="bitis-footer__bottom">
       <div class="container content-bottom d-flex">
         <div class="copyright content-bottom__item">
           <div class="d-flex flex-wrap policy-container">
@@ -42,8 +42,8 @@
           Đầu tư TPHCM
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </footer>
 </template>
 
 <script setup>

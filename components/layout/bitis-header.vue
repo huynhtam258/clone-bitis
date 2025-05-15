@@ -1,5 +1,5 @@
 <template>
-  <div class="main-header">
+  <header class="main-header">
     <bitis-header-contract />
     <div class="main-header__container">
       <div class="main-header__logo">
@@ -15,7 +15,6 @@
         <li class="main-header__item">CHIA SẺ</li>
       </ul>
       <div class="main-header__action">
-        
         <div class="action-search">
           <div class="icon-search">
             <svg version="1.1" class="svg search" xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +95,7 @@
       </div>
     </div>
     <bitis-banner />
-  </div>
+  </header>
 </template>
 
 <script setup>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bitis-newsletter">
+  <section class="bitis-newsletter">
     <div class="d-flex row">
       <div class="bitis-newsletter-content">
         <div class="bitis-newsletter-header">
@@ -15,7 +15,7 @@
       </div>
     </div>
 
-  </div>
+  </section>
 </template>
 
 <script setup>

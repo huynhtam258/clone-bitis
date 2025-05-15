@@ -1,9 +1,9 @@
 <template>
-  <div class="bitis-body">
-    <div class="bitis-body__container">
+  <main class="bitis-body">
+    <section class="bitis-body__container">
       <slot></slot>
-    </div>
-  </div>
+    </section>
+  </main>
 </template>
 
 <script setup>
