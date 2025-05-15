@@ -26,9 +26,10 @@
   background-color: #212026;
   color: #fff;
   font-size: 13px;
-  padding: 8px 0;
+  padding: 18px 0;
   .container-fluid {
     max-width: 1600px;
+    margin: auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
