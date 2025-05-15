@@ -10,11 +10,16 @@
         <bitis-card :title="'Sản phẩm nổi bật'" />
       </div>
     </bitis-body>
-    <section class="banner-stitch">
-      <a href="#" class="banner-effect">
-        <NuxtImg src="/banner/banner_stitch.webp" alt="banner stitch" format="webp" :width="1950" :height="750" />
-      </a>
-    </section>
+    <bitis-collection />
+    <bitis-banner-effect>
+      <NuxtImg
+        src="/banner/banner_stitch.webp"
+        alt="banner stitch"
+        format="webp"
+        :width="1950"
+        :height="750"
+      />
+    </bitis-banner-effect>
     <bitis-footer />
   </div>
 </template>
@@ -24,8 +29,10 @@ import BitisHeader from "~/components/layout/bitis-header.vue";
 import BitisBody from "~/components/layout/bitis-body.vue"
 import BitisSlider from "~/components/layout/bitis-slider.vue";
 import BitisCard from '~/components/layout/bitis-card.vue'
+import BitisCollection from "~/components/layout/bitis-collection.vue";
+import BitisBannerEffect from "~/components/layout/bitis-banner-effect.vue";
 import BitisFooter from "~/components/layout/bitis-footer.vue";
-import bitisHomeBanner from "~/components/layout/bitis-home-banner.vue";
+import BitisHomeBanner from "~/components/layout/bitis-home-banner.vue";
 
 import { useHead } from 'nuxt/app'
 
@@ -49,42 +56,10 @@ useHead({
   flex-direction: column;
   gap: 60px;
 }
-
-.banner-stitch {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  .banner-effect {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    &::after {
-      content: "";
-      display: inline-block;
-      width: 150%;
-      height: 80%;
-      position: absolute;
-      right: 30%;
-      top: -75%;
-      background: rgba(255, 255, 255, 0.25);
-      transform: skewY(-50deg);
-      transition: all 0.5s ease 0s;
-    }
-    &:hover {
-      &::after {
-        right: -75%;
-        top: 120%;
-      }
-    }
-  }
+.bitis-banner-effect {
   img {
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease-in-out;
-    &:hover {
-      transform: scale(1.05);
-    }
-
   }
 }
 </style>
