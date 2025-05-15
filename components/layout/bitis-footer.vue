@@ -1,6 +1,7 @@
 <template>
   <div class="bitis-footer">
     <bitis-newsletter />
+    <bitis-gallery />
     <div class="bitis-footer__info">
       <div class="d-flex row-info">
         <bitis-info-section
@@ -46,6 +47,7 @@
 </template>
 
 <script setup>
+import BitisGallery from './bitis-gallery.vue';
 import BitisNewsletter from './bitis-newsletter.vue';
 import BitisInfoSection from './bitis-info-section.vue';
 import BitisContract from './bitis-contract.vue';
