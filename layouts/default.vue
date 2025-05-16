@@ -25,7 +25,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import BitisHeader from "~/components/layout/bitis-header.vue";
 import BitisBody from "~/components/layout/bitis-body.vue"
 import BitisSlider from "~/components/layout/bitis-slider.vue";
@@ -36,8 +36,8 @@ import BitisFooter from "~/components/layout/bitis-footer.vue";
 import BitisHomeBanner from "~/components/layout/bitis-home-banner.vue";
 // import BitisNews from "~/components/layout/bitis-news.vue";
 import BitisNews from "~/components/layout/bitis-news.vue";
-
 import { useHead } from 'nuxt/app'
+
 
 useHead({
   title: `Trang bán hàng trực tuyến của Biti's Việt Nam`,
@@ -64,6 +64,14 @@ useHead({
     img {
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .bitis-home {
+    .home-product {
+      gap: 30px;
     }
   }
 }

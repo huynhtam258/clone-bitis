@@ -1,5 +1,5 @@
 <template>
-  <div class="bitis-header-contract">
+  <div class="bitis-header-contract desktop">
     <div class="container-fluid">
       <ul>
         <li>Hotline: <strong>0966158666</strong> (8h – 21h30)</li>

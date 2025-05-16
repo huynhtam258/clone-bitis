@@ -1,57 +1,82 @@
 <template>
   <footer class="bitis-footer">
-    <bitis-newsletter />
-    <bitis-gallery />
-    <section class="bitis-footer__info">
-      <div class="d-flex row-info">
-        <bitis-info-section
-          :title-info="'Về Bitis'"
-          :item-list="[]"
-        />
-        <bitis-info-section
-          :title-info="infomationData.title"
-          :item-list="infomationData.menuItems"
-        />
-        <bitis-info-section
-          :title-info="helpData.title"
-          :item-list="helpData.menuItems"
-        />
-        <bitis-contract />
-      </div>
-    </section>
-    <section class="bitis-footer__bottom">
-      <div class="container content-bottom d-flex">
-        <div class="copyright content-bottom__item">
-          <div class="d-flex flex-wrap policy-container">
-            <div class="policy-item">Điều khoản</div>
-            <div class="policy-item">Chính sách bảo mật</div>
-            <div class="policy-item">Hướng dẫn sử dụng</div>
+    <section class="desktop">
+      <bitis-newsletter />
+      <bitis-gallery />
+      <section class="bitis-footer__info">
+        <div class="d-flex row-info">
+          <bitis-info-section v-for="item in menuOptionList" :title-info="item.title" :item-list="item.menuItems" />
+          <bitis-contract />
+        </div>
+      </section>
+      <section class="bitis-footer__bottom">
+        <div class="container content-bottom d-flex">
+          <div class="copyright content-bottom__item">
+            <div class="d-flex flex-wrap policy-container">
+              <div class="policy-item">Điều khoản</div>
+              <div class="policy-item">Chính sách bảo mật</div>
+              <div class="policy-item">Hướng dẫn sử dụng</div>
+            </div>
+            <p>
+              Copyright © 2025 Biti's.
+              <a href="https://www.haravan.com/" target="_blank">
+                Powered by Haravan Enterprise
+              </a>
+            </p>
           </div>
-          <p>
-            Copyright © 2025 Biti's.
-            <a href="https://www.haravan.com/" target="_blank">
-              Powered by Haravan Enterprise
-            </a>
-          </p>
+          <div class="content-bottom__item approved-icon">
+            <NuxtImg src="/logos/bocongthuong_confirm_medium.png" :width="120" :height="45" alt="Bộ công thương"
+              format="webp" />
+          </div>
+          <div class="certificate content-bottom__item">
+            Giấy CNĐKDN: 0301340497 được cấp ngày 20/01/1992, được sửa đổi lần thứ 25 ngày 27/01/2022 bởi Sở Kế hoạch và
+            Đầu tư TPHCM
+          </div>
         </div>
-        <div class="content-bottom__item approved-icon">
-          <NuxtImg src="/logos/bocongthuong_confirm_medium.png" :width="120" :height="45" alt="Bộ công thương" format="webp" />
-        </div>
-        <div class="certificate content-bottom__item">
-          Giấy CNĐKDN: 0301340497 được cấp ngày 20/01/1992, được sửa đổi lần thứ 25 ngày 27/01/2022 bởi Sở Kế hoạch và
-          Đầu tư TPHCM
-        </div>
-      </div>
+      </section>
+    </section>
+
+    <section class="mobile">
+      <bitis-expansion>
+        <template #title>
+          <div>Thông tin thêm</div>
+        </template>
+        <template #content>
+          <bitis-expansion v-for="item in menuOptionList">
+            <template #title>
+              <div class="title-expansion">
+                <h4>{{ item.title }}</h4>
+              </div>
+            </template>
+            <template #content>
+              <ul class="menu-expansion">
+                <li class="menu-expansion__item" v-for="item in item.menuItems">
+                  <a :href="item.link">{{ item.text }}</a>
+                </li>
+              </ul>
+            </template>
+          </bitis-expansion>
+        </template>
+      </bitis-expansion>
     </section>
   </footer>
 </template>
 
 <script setup>
+import BitisExpansion from "~/components/layout/bitis-expansion.vue";
 import BitisGallery from './bitis-gallery.vue';
 import BitisNewsletter from './bitis-newsletter.vue';
 import BitisInfoSection from './bitis-info-section.vue';
 import BitisContract from './bitis-contract.vue';
 
+const aboutBitis = {
+  title: "Về Biti's",
+  menuItems: [
+    { text: "Câu chuyện Bitis's", link: "#" },
+    { text: "Hoạt động", link: "#" },
+    { text: "Liên hệ", link: "#" },
+  ]
+}
 const infomationData = {
   title: 'Thông tin',
   menuItems: [
@@ -75,17 +100,28 @@ const helpData = {
     { text: "Q&A", link: "#" }
   ]
 }
+const menuOptionList = [
+  aboutBitis,
+  infomationData,
+  helpData
+]
 </script>
 
 <style lang="scss" scoped>
 .bitis-footer {
+  .mobile {
+    display: none;
+  }
+
   &__info {
     padding-top: 25px;
+
     .row-info {
       justify-content: center;
       gap: 60px;
     }
   }
+
   &__bottom {
     background-color: #dfdfdf;
     border-top: 1px solid #e7e7e7;
@@ -121,23 +157,27 @@ const helpData = {
   }
 }
 
-@media (max-width: 700px) {
-  .bitis-footer {
-    &__bottom {
-      .content-bottom {
-        flex-direction: column-reverse;
-        align-items: center;
-        &__item {
-          width: 70%;
-          text-align: center;
-          .policy-container {
-            align-items: center;
-            justify-content: space-between;
-          }
-        }
-      }
+// mobile style
+.title-expansion {
+  padding: 15px 0;
 
-    }
+  h4 {
+    margin: unset;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: futura-REGULAR, sans-serif;
+  }
+}
+
+.menu-expansion {
+  padding: 10px 0px 20px;
+  font-weight: 500;
+  margin: 0;
+  
+  &__item {
+    color: var(--footer-color-text);
+    font-weight: 500;
+    margin-bottom: 8px;
   }
 }
 </style>

@@ -30,7 +30,12 @@ const modules = [Pagination];
     width: 100%;
     height: auto;
   }
+}
 
+@media (max-width: 768px) {
+  .bitis-slider { 
+    margin: 0 auto 10px;
+  }
 }
 </style>
 <style lang="scss">

@@ -5,7 +5,8 @@
       <Swiper :spaceBetween="10" :slidesPerView="4" :loop="true" :navigation="true" :breakpoints="{
         1024: { slidesPerView: 4 },
         768: { slidesPerView: 2 },
-        480: { slidesPerView: 1 }
+        480: { slidesPerView: 1 },
+        320: { slidesPerView: 1 }
       }">
         <SwiperSlide v-for="(item, index) in items" :key="index">
           <div class="news-item">

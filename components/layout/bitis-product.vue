@@ -66,6 +66,7 @@
 
     .box-price {
       width: 100%;
+      flex-wrap: wrap;
 
       .main-price-sale {
         font-size: 16px;
