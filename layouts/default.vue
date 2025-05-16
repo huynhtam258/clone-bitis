@@ -20,6 +20,7 @@
         :height="750"
       />
     </bitis-banner-effect>
+    <bitis-news />
     <bitis-footer />
   </div>
 </template>
@@ -33,6 +34,8 @@ import BitisCollection from "~/components/layout/bitis-collection.vue";
 import BitisBannerEffect from "~/components/layout/bitis-banner-effect.vue";
 import BitisFooter from "~/components/layout/bitis-footer.vue";
 import BitisHomeBanner from "~/components/layout/bitis-home-banner.vue";
+// import BitisNews from "~/components/layout/bitis-news.vue";
+import BitisNews from "~/components/layout/bitis-news.vue";
 
 import { useHead } from 'nuxt/app'
 
@@ -52,14 +55,16 @@ useHead({
 </script>
 
 <style lang="scss" scoped>
-.home-product {
-  flex-direction: column;
-  gap: 60px;
-}
-.bitis-banner-effect {
-  img {
-    width: 100%;
-    height: auto;
+.bitis-home {
+  .home-product {
+    flex-direction: column;
+    gap: 60px;
+  }
+  .bitis-banner-effect {
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 </style>

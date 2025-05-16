@@ -22,6 +22,7 @@
   color: #111111;
   h3 {
     margin: 0;
+    font-style: italic;
   }
 }
 </style>
