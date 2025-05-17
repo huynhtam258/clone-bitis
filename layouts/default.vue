@@ -33,7 +33,7 @@ import BitisSlider from "~/components/layout/bitis-slider.vue";
 import BitisCard from '~/components/layout/bitis-card.vue'
 import BitisCollection from "~/components/layout/bitis-collection.vue";
 import BitisBannerEffect from "~/components/common/bitis-banner-effect.vue";
-import BitisFooter from "~/components/layout/bitis-footer.vue";
+import BitisFooter from "~/components/layout/home/footer/bitis-footer.vue";
 import BitisHomeBanner from "~/components/layout/bitis-home-banner.vue";
 import BitisStores from "~/components/layout/bitis-stores.vue";
 import BitisNews from "~/components/layout/bitis-news.vue";
