@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-import BitisHeader from "~/components/layout/bitis-header.vue";
+import BitisHeader from "~/components/layout/home/header/bitis-header.vue";
 import BitisBody from "~/components/common/bitis-body.vue"
 import BitisSlider from "~/components/layout/bitis-slider.vue";
 import BitisCard from '~/components/layout/bitis-card.vue'
