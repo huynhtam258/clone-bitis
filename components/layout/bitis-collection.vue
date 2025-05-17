@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import BitisBannerEffect from "~/components/layout/bitis-banner-effect.vue";
+import BitisBannerEffect from "~/components/common/bitis-banner-effect.vue";
 </script>
 
 <style lang="scss" scoped>

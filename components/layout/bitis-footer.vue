@@ -52,7 +52,7 @@
 </template>
 
 <script setup>
-import BitisExpansion from "~/components/layout/bitis-expansion.vue";
+import BitisExpansion from "~/components/common/bitis-expansion.vue";
 import BitisGallery from './bitis-gallery.vue';
 import BitisNewsletter from './bitis-newsletter.vue';
 import BitisInfoSection from './bitis-info-section.vue';

@@ -13,8 +13,8 @@
 </template>
 
 <script setup>
-import BitisGrid from "~/components/layout/bitis-grid.vue";
-import BitisGridItem from "~/components/layout/bitis-grid-item.vue";
+import BitisGrid from "~/components/common/bitis-grid.vue";
+import BitisGridItem from "~/components/common/bitis-grid-item.vue";
 import bitisProduct from "~/components/layout/bitis-product.vue";
 
 const props = defineProps({
