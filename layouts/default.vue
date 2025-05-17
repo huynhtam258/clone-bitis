@@ -21,6 +21,7 @@
       />
     </bitis-banner-effect>
     <bitis-news />
+    <bitis-stores />
     <bitis-footer />
   </div>
 </template>
@@ -34,7 +35,7 @@ import BitisCollection from "~/components/layout/bitis-collection.vue";
 import BitisBannerEffect from "~/components/layout/bitis-banner-effect.vue";
 import BitisFooter from "~/components/layout/bitis-footer.vue";
 import BitisHomeBanner from "~/components/layout/bitis-home-banner.vue";
-// import BitisNews from "~/components/layout/bitis-news.vue";
+import BitisStores from "~/components/layout/bitis-stores.vue";
 import BitisNews from "~/components/layout/bitis-news.vue";
 import { useHead } from 'nuxt/app'
 

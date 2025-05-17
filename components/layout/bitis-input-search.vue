@@ -26,6 +26,9 @@
 
   .icon-search {
     padding: 10px;
+    svg {
+      width: 17px;
+    }
   }
 
   input {
