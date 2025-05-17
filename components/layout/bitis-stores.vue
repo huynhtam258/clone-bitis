@@ -153,4 +153,22 @@ const vietnamProvinces = [
     }
   }
 }
+
+@media (max-width: 768px) {
+  .bitis-stores {
+    padding: 0 15px 65px;
+  }
+  .bitis-stores__main {
+    flex-direction: column;
+    .locations {
+      width: 100%;
+      .store-address {
+        height: 322px;
+      }
+    }
+    .img-map {
+      width: 100%;
+    }
+  }
+}
 </style>

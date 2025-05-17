@@ -13,6 +13,7 @@
     </section>
 
     <section class="mobile footer-mobile">
+      <bitis-newsletter />
       <bitis-gallery />
       <bitis-expansion>
         <template #title>
