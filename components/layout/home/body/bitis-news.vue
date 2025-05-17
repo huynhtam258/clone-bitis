@@ -115,4 +115,13 @@ const items = Array.from({ length: 10 });
     }
   }
 }
+@media (max-width: 768px) {
+  .bitis-news {
+    margin: 0 15px;
+    h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+}
 </style>

@@ -157,6 +157,10 @@ const vietnamProvinces = [
 @media (max-width: 768px) {
   .bitis-stores {
     padding: 0 15px 65px;
+    h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
   }
   .bitis-stores__main {
     flex-direction: column;
