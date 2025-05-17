@@ -3,7 +3,8 @@
     <h3 class="container">Hệ thống cửa hàng của bitis</h3>
     <div class="bitis-stores__main container">
       <div class="locations">
-        <select class="locations-select" name="cars" id="cars">
+        <label for="provices">provices</label>
+        <select class="locations-select" name="provices" id="provices">
           <option v-for="province in vietnamProvinces" :value="province">{{ province }}</option>
         </select>
         <div class="store-address">
@@ -75,6 +76,7 @@ const vietnamProvinces = [
     border-bottom: 2px solid #f3f3f3;
     margin-bottom: 30px;
     font-weight: bold;
+    text-transform: uppercase;
   }
 
   &__main {
@@ -87,6 +89,11 @@ const vietnamProvinces = [
       height: 100%;
       display: flex;
       flex-direction: column;
+      position: relative;
+      label {
+        position: absolute;
+        color: transparent;
+      }
 
       .locations-select {
         width: 100%;
