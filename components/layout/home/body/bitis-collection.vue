@@ -48,4 +48,10 @@ import BitisBannerEffect from "~/components/common/bitis-banner-effect.vue";
     }
   }
 }
+
+@media (max-width: 768px) {
+  .bitis-grid-banner {
+    grid-template-columns: unset !important;
+  }
+}
 </style>

@@ -2,7 +2,10 @@
   <nav class="bitis-nav">
     <ul class="bitis-nav__list">
       <li v-for="item in menuItems" class="bitis-nav__item">
-        <a href="">{{ item.name }}</a>
+        <a href="">
+          <span>{{ item.name }}</span>
+          <bitis-icon-chevron-down v-if="item.subItems" />
+        </a>
         <ul v-if="item.subItems" class="nav-sub">
           <li v-for="subItem in item.subItems" class="nav-sub__item">
             <a href="#">{{ subItem }}</a>
@@ -15,6 +18,8 @@
 </template>
 
 <script setup>
+import BitisIconChevronDown from "~/components/common/icon/bitis-icon-chevron-down.vue";
+
 const menuItems = [
   { name: "VỀ BITI'S", link: "#" },
   {
@@ -61,10 +66,19 @@ const menuItems = [
         color: #333;
         text-decoration: none;
         padding: 10px 15px;
-        display: block;
-
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        svg {
+          width: 7px;
+          height: 7px;
+          -webkit-transition: all 0.4s ease-in-out 0s;
+        }
         &:hover {
           color: #fff;
+          svg {
+            transform: rotate(-180deg);
+          }
         }
       }
 
