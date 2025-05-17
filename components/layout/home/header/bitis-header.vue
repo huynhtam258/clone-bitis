@@ -5,15 +5,7 @@
       <div class="main-header__logo">
         <NuxtImg src="/logos/logo.svg" :height="60" :width="95" alt="bitis" />
       </div>
-      <ul class="main-header__list">
-        <li class="main-header__item">VỀ BITI'S</li>
-        <li class="main-header__item">NAM</li>
-        <li class="main-header__item">NỮ</li>
-        <li class="main-header__item">BÉ TRAI</li>
-        <li class="main-header__item">BÉ GÁI</li>
-        <li class="main-header__item">PHỤ KIỆN</li>
-        <li class="main-header__item">CHIA SẺ</li>
-      </ul>
+      <bitis-nav />
       <div class="main-header__action">
         <bitis-input-search class="desktop" />
         <div class="box-icon">
@@ -89,6 +81,7 @@
 import BitisInputSearch from './bitis-input-search.vue';
 import BitisHeaderContract from './bitis-header-contract.vue';
 import BitisBanner from './bitis-banner.vue';
+import BitisNav from './bitis-nav.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -106,10 +99,10 @@ import BitisBanner from './bitis-banner.vue';
     max-width: 1600px;
     margin: auto;
   }
-  &__list {
-    padding: 0;
-    margin: 0;
-  }
+  // &__list {
+  //   padding: 0;
+  //   margin: 0;
+  // }
   &__item {
     list-style: none;
     display: inline-block;
