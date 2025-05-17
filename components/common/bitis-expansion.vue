@@ -1,6 +1,6 @@
 <template>
   <div class="bitis-expansion">
-    <div class="bitis-expansion__title" @click="onClickExpansion">
+    <div class="bitis-expansion__title" :class="{'isExpansion-title': isExpansion}" @click="onClickExpansion">
       <slot name="title"></slot>
     </div>
     <div class="bitis-expansion__content" :class="{'isExpansion': isExpansion}">

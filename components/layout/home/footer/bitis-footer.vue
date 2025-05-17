@@ -17,13 +17,21 @@
       <bitis-gallery />
       <bitis-expansion>
         <template #title>
-          <div class="footer-mobile__title">Thông tin thêm</div>
+          <div class="footer-mobile__title">
+            <span>Thông tin thêm</span>
+            <div class="expansion-title-main">
+              <bitis-icon-chevron-down />
+            </div>
+          </div>
         </template>
         <template #content>
           <bitis-expansion class="footer-mobile__content" v-for="item in menuOptionList">
             <template #title>
               <div class="title-expansion">
-                <h4>{{ item.title }}</h4>
+                <h4>
+                  <span>{{ item.title }}</span>
+                  <bitis-icon-chevron-down />
+                </h4>
               </div>
             </template>
             <template #content>
@@ -37,7 +45,10 @@
           <bitis-expansion class="footer-mobile__content">
             <template #title>
               <div class="title-expansion">
-                <h4>Thông tin địa chỉ</h4>
+                <h4>
+                  <span>Thông tin địa chỉ</span>
+                  <bitis-icon-chevron-down />
+                </h4>
               </div>
             </template>
             <template #content>
@@ -58,6 +69,8 @@ import BitisNewsletter from './bitis-newsletter.vue';
 import BitisInfoSection from './bitis-info-section.vue';
 import BitisContract from './bitis-contract.vue';
 import BitisLicense from "./bitis-license.vue";
+import BitisIconChevronDown from "~/components/common/icon/bitis-icon-chevron-down.vue";
+
 const aboutBitis = {
   title: "Về Biti's",
   menuItems: [
@@ -98,10 +111,6 @@ const menuOptionList = [
 
 <style lang="scss" scoped>
 .bitis-footer {
-  .mobile {
-    display: none;
-  }
-
   &__info {
     padding-top: 25px;
 
@@ -110,9 +119,6 @@ const menuOptionList = [
       gap: 60px;
     }
   }
-
-  // &__bottom {
-  // }
 }
 
 .footer-mobile {
@@ -124,6 +130,19 @@ const menuOptionList = [
     font-weight: 500;
     cursor: pointer;
     background: #ffffff;
+    .expansion-title-main {
+      width: fit-content;
+      margin: auto;
+      background-color: #333;
+      border-radius: 50%;
+      fill: #fff;
+      padding: 4px 7px;
+      margin-top: 8px;
+    }
+    svg {
+      width: 11px;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+    }
   }
   &__content {
     padding: 0 15px;
@@ -137,6 +156,13 @@ const menuOptionList = [
       font-weight: 700;
       text-transform:uppercase;
       font-family: futura-REGULAR, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      svg {
+        width: 14px;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+      }
     }
   }
 
@@ -157,6 +183,12 @@ const menuOptionList = [
   .bitis-contract {
     width: 100% !important;
     max-width: unset;
+  }
+}
+
+.isExpansion-title {
+  svg {
+    transform: rotate(-180deg);
   }
 }
 </style>
