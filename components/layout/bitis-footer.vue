@@ -36,13 +36,14 @@
       </section>
     </section>
 
-    <section class="mobile">
+    <section class="mobile footer-mobile">
+      <bitis-gallery />
       <bitis-expansion>
         <template #title>
-          <div>Thông tin thêm</div>
+          <div class="footer-mobile__title">Thông tin thêm</div>
         </template>
         <template #content>
-          <bitis-expansion v-for="item in menuOptionList">
+          <bitis-expansion class="footer-mobile__content" v-for="item in menuOptionList">
             <template #title>
               <div class="title-expansion">
                 <h4>{{ item.title }}</h4>
@@ -54,6 +55,16 @@
                   <a :href="item.link">{{ item.text }}</a>
                 </li>
               </ul>
+            </template>
+          </bitis-expansion>
+          <bitis-expansion class="footer-mobile__content">
+            <template #title>
+              <div class="title-expansion">
+                <h4>Thông tin địa chỉ</h4>
+              </div>
+            </template>
+            <template #content>
+              <bitis-contract />
             </template>
           </bitis-expansion>
         </template>
@@ -148,6 +159,7 @@ const menuOptionList = [
 
       &__item {
         width: 30%;
+
         &.approved-icon {
           text-align: center;
         }
@@ -157,27 +169,48 @@ const menuOptionList = [
   }
 }
 
-// mobile style
-.title-expansion {
-  padding: 15px 0;
-
-  h4 {
-    margin: unset;
+.footer-mobile {
+  &__title {
+    text-align: center;
+    display: block;
+    padding: 10px 0 8px;
     font-size: 16px;
-    font-weight: 700;
-    font-family: futura-REGULAR, sans-serif;
-  }
-}
-
-.menu-expansion {
-  padding: 10px 0px 20px;
-  font-weight: 500;
-  margin: 0;
-  
-  &__item {
-    color: var(--footer-color-text);
     font-weight: 500;
-    margin-bottom: 8px;
+    cursor: pointer;
+    background: #ffffff;
+  }
+  &__content {
+    padding: 0 15px;
+  }
+  .title-expansion {
+    padding: 15px 0;
+
+    h4 {
+      margin: unset;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform:uppercase;
+      font-family: futura-REGULAR, sans-serif;
+    }
+  }
+
+  .menu-expansion {
+    padding: 10px 0px 20px;
+    font-weight: 500;
+    margin: 0;
+
+    &__item {
+      color: var(--footer-color-text);
+      font-weight: 500;
+      margin-bottom: 8px;
+      a {
+        line-height: 22.4px;
+      }
+    }
+  }
+  .bitis-contract {
+    width: 100% !important;
+    max-width: unset;
   }
 }
 </style>

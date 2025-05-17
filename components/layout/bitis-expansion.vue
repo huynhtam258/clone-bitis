@@ -21,7 +21,7 @@ const onClickExpansion = () => {
   &__content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1.5s ease-in-out;
+    transition: max-height 700ms ease-in-out;
 
     &.isExpansion {
       max-height: 1000px;

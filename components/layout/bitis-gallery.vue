@@ -43,4 +43,19 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .bitis-gallery {
+  flex-wrap: wrap;
+  &__item {
+    width: calc(100% / 4);
+    aspect-ratio: 1 / 1;
+    
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+}
 </style>
