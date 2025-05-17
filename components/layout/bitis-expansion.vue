@@ -24,7 +24,7 @@ const onClickExpansion = () => {
     transition: max-height 700ms ease-in-out;
 
     &.isExpansion {
-      max-height: 1000px;
+      max-height: 2000px;
     }
   }
 }
