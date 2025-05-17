@@ -46,16 +46,16 @@
 
     .copyright {
       .policy-container {
-        gap: 20px;
-
         .policy-item {
           list-style: none;
+          margin-right: 20px;
         }
       }
     }
 
     &__item {
       width: 30%;
+      line-height: 22.4px;
 
       &.approved-icon {
         text-align: center;
@@ -74,10 +74,12 @@
       &__item {
         width: 100%;
         text-align: left;
-        line-height: 22.4px;
         .policy-container {
           gap: 10px !important;
           justify-content: center;
+          .policy-item {
+            margin-right: unset !important;
+          }
         }
         .powered {
           margin: 15px;
