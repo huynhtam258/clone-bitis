@@ -156,6 +156,14 @@ const isDialogOpen = ref(false)
   }
 }
 
+@media (max-width: 1200px) {
+  .desktop {
+    display: none !important;
+  }
+  .mobile {
+    display: block;
+  }
+}
 
 @media (max-width: 768px) {
   .main-header__logo {
