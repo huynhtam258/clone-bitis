@@ -9,12 +9,16 @@
         <bitis-card :title="'Sản phẩm nổi bật'" />
       </div>
     </bitis-body>
-    <bitis-collection />
-    <bitis-banner-effect>
-      <NuxtImg src="/banner/banner_stitch.webp" alt="banner stitch" format="webp" :width="1950" :height="750" />
-    </bitis-banner-effect>
-    <bitis-news />
-    <bitis-stores />
+    <client-only>
+      <bitis-collection />
+      <bitis-banner-effect>
+        <NuxtImg src="/banner/banner_stitch.webp" alt="banner stitch" format="webp" :width="1950" :height="750" />
+      </bitis-banner-effect>
+    </client-only>
+    <client-only>
+      <bitis-news />
+      <bitis-stores />
+    </client-only>
   </main>
 </template>
 
@@ -26,8 +30,8 @@ import BitisCollection from "~/components/layout/home/body/bitis-collection.vue"
 import BitisBannerEffect from "~/components/common/bitis-banner-effect.vue";
 
 import BitisHomeBanner from "~/components/layout/home/body/bitis-home-banner.vue";
-import BitisStores from "~/components/layout/bitis-stores.vue";
-import BitisNews from "~/components/layout/home/body/bitis-news.vue";
+const BitisStores = defineAsyncComponent(() => import("~/components/layout/bitis-stores.vue"));
+const BitisNews = defineAsyncComponent(() => import("~/components/layout/home/body/bitis-news.vue"));
 </script>
 
 

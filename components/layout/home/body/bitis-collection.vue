@@ -40,18 +40,20 @@ import BitisBannerEffect from "~/components/common/bitis-banner-effect.vue";
     width: 80%;
     margin: 50px auto 0;
   }
-
+  a {
+    height: 100%;
+  }
   .bitis-banner-effect {
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
     }
   }
 }
 
-// @media (max-width: 768px) {
-//   .bitis-grid-banner {
-//     grid-template-columns: unset !important;
-//   }
-// }
+@media (max-width: 768px) {
+  .bitis-grid-banner {
+    grid-template-columns: unset !important;
+  }
+}
 </style>
