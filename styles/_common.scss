@@ -1,3 +1,9 @@
+body {
+  &:has(.dialog-overlay) {
+    overflow: hidden;
+  }
+}
+
 /* 
   container styles
 */
